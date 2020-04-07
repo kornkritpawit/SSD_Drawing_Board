@@ -1,7 +1,6 @@
 package objects;
 
-import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.*;
 
 public class Oval extends GObject {
 
@@ -11,6 +10,8 @@ public class Oval extends GObject {
 		super(x, y, width, height);
 		this.color = color;
 	}
+
+
 
 	@Override
 	public void paintObject(Graphics g) {
@@ -23,6 +24,7 @@ public class Oval extends GObject {
 	@Override
 	public void paintLabel(Graphics g) {
 		// TODO: Implement this method.
+		g.drawString("Oval",x,y+height+12);
 	}
 	
 }
