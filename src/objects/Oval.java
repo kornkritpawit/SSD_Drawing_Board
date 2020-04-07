@@ -15,6 +15,9 @@ public class Oval extends GObject {
 	@Override
 	public void paintObject(Graphics g) {
 		// TODO: Implement this method.
+		g.setColor(color);
+		g.drawOval(x,y,width,height);
+		g.fillOval(x,y,width,height);
 	}
 	
 	@Override

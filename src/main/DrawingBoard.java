@@ -25,6 +25,9 @@ public class DrawingBoard extends JPanel {
 	
 	public void addGObject(GObject gObject) {
 		// TODO: Implement this method.
+		gObjects.add(gObject);
+		repaint();
+
 	}
 	
 	public void groupAll() {
@@ -37,6 +40,8 @@ public class DrawingBoard extends JPanel {
 	
 	public void clear() {
 		// TODO: Implement this method.
+		gObjects.clear();
+		repaint();
 	}
 	
 	@Override
