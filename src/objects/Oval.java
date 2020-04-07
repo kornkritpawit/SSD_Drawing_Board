@@ -23,6 +23,8 @@ public class Oval extends GObject {
 	@Override
 	public void paintLabel(Graphics g) {
 		// TODO: Implement this method.
+		g.drawString("Oval",x+10,y+height+15);
+
 	}
 	
 }

@@ -25,6 +25,7 @@ public class Rect extends GObject  {
 	@Override
 	public void paintLabel(Graphics g) {
 		// TODO: Implement this method.
+		g.drawString("Rect",x+10,y+height+15);
 	}
 	
 }
