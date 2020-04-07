@@ -9,6 +9,7 @@ import objects.*;
 
 public class DrawingBoard extends JPanel {
 
+
 	private MouseAdapter mouseAdapter; 
 	private List<GObject> gObjects;
 	private GObject target;
