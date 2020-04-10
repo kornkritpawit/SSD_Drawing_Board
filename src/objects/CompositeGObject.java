@@ -29,33 +29,31 @@ public class CompositeGObject extends GObject {
 		// TODO: Implement this method.
 		this.x += dX;
 		this.y += dY;
-		for (GObject gObject : gObjects){
-			gObject.x += dX;
-			gObject.y += dY;
+		for(GObject gObject: gObjects){
 			gObject.move(dX,dY);
 		}
-
 	}
-	
+
 	public void recalculateRegion() {
 		// TODO: Implement this method.
-		GObject gObject = gObjects.get(0);
-		int min_x = gObject.x;
-		int min_y = gObject.y;
-		int max_x = min_x+ gObject.width;
-		int max_y = min_y+ gObject.height;
-		for( GObject gObject1: gObjects){
-			if(min_x> gObject1.x){
-				min_x = gObject1.x;
+		GObject object = gObjects.get(0);
+		int min_x = object.x;
+		int min_y = object.y;
+		int max_x = min_x+ object.width;
+		int max_y = min_y+ object.height;
+
+		for( GObject gObject: gObjects){
+			if(min_x> gObject.x){
+				min_x = gObject.x;
 			}
-			if(max_x < gObject1.x + gObject1.width){
-				max_x = gObject1.x + gObject1.width;
+			if(max_x < gObject.x + gObject.width){
+				max_x = gObject.x + gObject.width;
 			}
-			if(min_y>gObject1.y){
-				min_y = gObject1.y;
+			if(min_y>gObject.y){
+				min_y = gObject.y;
 			}
-			if(max_y < gObject1.y+ gObject1.height){
-				max_y = gObject1.y + gObject1.height;
+			if(max_y < gObject.y+ gObject.height){
+				max_y = gObject.y + gObject.height;
 			}
 			this.x = min_x;
 			this.y = min_y;
@@ -63,7 +61,7 @@ public class CompositeGObject extends GObject {
 			this.height = max_y - min_y;
 		}
 	}
-	
+
 	@Override
 	public void paintObject(Graphics g) {
 		// TODO: Implement this method.
@@ -75,7 +73,6 @@ public class CompositeGObject extends GObject {
 	@Override
 	public void paintLabel(Graphics g) {
 		// TODO: Implement this method.
-		g.drawString("Group",x,y+height+12);
+		g.drawString("Group",x, y+height+12);
 	}
-	
 }
